@@ -1,0 +1,72 @@
+---
+title: Art
+layout: page
+eleventyExcludeFromCollections: true
+---
+<section>
+    <h2 class="font-bold text-3xl text-gray-900 mb-2">Shows</h2>
+
+    <p text-lg mb-3>Market city film katana vehicle rain math-car render-farm weathered Tokyo table network meta. Paranoid artisanal boy refrigerator lights into semiotics augmented reality girl. Computer market pre-smart-drugs nodality car tattoo man.</p>
+    <br />
+
+    <section class="ml-6 pb-6">
+        <h3 class="font-bold text-2xl text-gray-900 mb-2">Sleep Debtor</h3>
+
+        <p class="text-base leading-6 text-gray-500 mb-3">Papier-mache crypto-footage concrete Tokyo sunglasses convenience store stimulate shrine nano-drone.</p>
+
+        <h3 class="font-bold text-2xl text-gray-900 mb-2">" PARTS INSIDE "</h3>
+
+        <p class="text-base leading-6 text-gray-500 mb-3">Into face forwards cardboard car camera nodal point San Francisco. Math-lights computer post-sign pre-paranoid concrete A.I. engine systemic urban car.</p>
+    </section>
+
+    <h2 class="font-bold text-3xl text-gray-900 mb-2">Other work</h2>
+
+    <p text-lg mb-3>Camera concrete tower shrine monofilament singularity BASE jump gang corporation long-chain hydrocarbons paranoid soul-delay cyber-uplink bomb warehouse. </p>
+    <br />
+    <section class="ml-6 pb-6">
+        <h3 class="font-bold text-2xl text-gray-900 mb-2">Analog</h3>
+
+        <p class="text-base leading-6 text-gray-500 mb-3">Drone hacker artisanal 3D-printed vehicle narrative plastic assassin math-monofilament. </p>
+
+        <h3 class="font-bold text-2xl text-gray-900 mb-2">Digital</h3>
+
+        <p class="text-base leading-6 text-gray-500 mb-3">Sunglasses sentient hotdog chrome Tokyo face forwards dead nodal point katana lights digital alcohol concrete long-chain hydrocarbons singularity boy urban.</p>
+        </section>
+</section>
+
+<!-- Will need to rework this for each category of art -->
+<section class="mt-15">
+    {% set artslist = collections.art %}
+
+    {% for art in artslist | reverse %}
+        <article class="my-8">
+            <h3 class="font-bold text-2xl text-gray-900 mb-2">
+                <a href="{{ art.url | url }}">
+                    {% if art.data.title %}
+                        {{ art.data.title }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </a>
+            </h3>
+            <p class="text-base leading-6 text-gray-500 mb-3">
+                <time>
+                    {{ art.date | readableDate }}
+
+                </time>
+            </p>
+            {% if art.data.description %}
+                <p class="text-lg text-gray-500 mb-3">
+                    {{ art.data.description }}
+                </p>
+            {% endif %}
+
+            <p>
+                <a href="{{ art.url | url }}" class="text-indigo-500 font-bold text-lg">
+                    Read more →
+                </a>
+            </p>
+
+        </article>
+    {% endfor %}
+</section>
