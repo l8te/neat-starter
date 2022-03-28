@@ -1,5 +1,5 @@
----
 items:
+
   - text: Art
     url: "/art"
   - text: Projects
@@ -8,4 +8,3 @@ items:
     url: "/blog"
   - text: About
     url: "/about"
-
