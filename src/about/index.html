@@ -1,0 +1,43 @@
+---
+title: About
+layout: page
+---
+
+<section class="mt-15">
+    <h2 class="font-bold text-3xl text-gray-900 mb-2">Who is this
+    </h2>
+    <p text-lg mb-3>A description of what I do. Youtube monofilament assault voodoo god receding artisanal man rebar realism tank-traps. Smart-modem pen footage sunglasses chrome lights. Render-farm faded dome math-drugs tanto dolphin grenade assassin.</p>
+    
+    <!-- remove br when possible -->
+    <br />
+
+    <h3 class="font-bold text-2xl text-gray-900 mb-2">Some things I've done</h3>
+    <p text-lg mb-3>What's a bragdoc?</p>
+
+    {% set bragslist = collections.brag %}
+
+    {% for brag in bragslist | reverse %}
+        <article class="my-8">
+            <h4 class="font-bold text-1xl text-gray-900 mb-2">
+                <a href="{{ brag.url | url }}">
+                    {% if brag.data.title %}
+                        {{ brag.data.title }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </a>
+            </h4>
+            <p class="text-base leading-6 text-gray-500 mb-3">
+                <time>
+                    {{ brag.date | readableDate }}
+                </time>
+            </p>
+            {% if brag.data.description %}
+                <p class="text-lg text-gray-500 mb-3">
+                    {{ brag.data.description }}
+                </p>
+            {% endif %}
+
+        </article>
+    {% endfor %}
+</section>
