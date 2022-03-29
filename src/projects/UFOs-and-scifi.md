@@ -1,6 +1,6 @@
 ---
 title: UFO sightings and science fiction movies - an analysis
-parent: Projects
+parent: projects
 description: Thinkful Data Analytics capstone project
 date: 2021-07-12
 tags: [ 'data analysis' ]

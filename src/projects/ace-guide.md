@@ -1,6 +1,6 @@
 ---
 title: Asexuality Basics
-parent: Projects
+parent: projects
 description: A LibGuide created for 530 Search and the Information Landscape at Rutgers
 date: 2021-12-05
 tags: [ 'libguide' ]
