@@ -1,6 +1,7 @@
 ---
 title: Projects
 layout: page
+eleventyExcludeFromCollections: true
 ---
 
 <section class="mt-15">
@@ -8,7 +9,7 @@ layout: page
 
     {% for project in projectslist | reverse %}
         <article class="my-8">
-            <h2 class="font-bold text-3xl text-gray-900 mb-2">
+            <h2 class="font-bold text-2xl text-gray-900 mb-2">
                 <a href="{{ project.url | url }}">
                     {% if project.data.title %}
                         {{ project.data.title }}
@@ -20,19 +21,19 @@ layout: page
             <p class="text-base leading-6 text-gray-500 mb-3">
                 <time>
                     {{ project.date | readableDate }}
-                    by
-                    <a>{{ project.data.author }}</a>
+                    <!-- by
+                    <a>{{ project.data.author }}</a> -->
 
                 </time>
             </p>
             {% if project.data.description %}
-                <p class="text-lg text-gray-500 mb-3">
+                <p class="text-gray-500 mb-3">
                     {{ project.data.description }}
                 </p>
             {% endif %}
 
             <p>
-                <a href="{{ project.url | url }}" class="text-indigo-500 font-bold text-lg">
+                <a href="{{ project.url | url }}" class="text-yellow-500 hover:text-lime-500">
                     Read more →
                 </a>
             </p>

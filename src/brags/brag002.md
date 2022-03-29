@@ -9,4 +9,5 @@ icon: 📊
 
 In the beginning of 2021, I enrolled in a [6-month online data analytics course at Thinkful](https://www.thinkful.com/bootcamp/data-analytics/). We covered a lot of material, including statistics in Excel, data visualization in Tableau, SQL, and data analysis in Python.
 
-*add link to project page*
+<!-- this link may need to change -->
+View the full project [here](/../projects/ufo-sightings-and-science-fiction-movies-an-analysis/).

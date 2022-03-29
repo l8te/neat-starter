@@ -3,15 +3,25 @@
 @tailwind utilities;
 
 /*Your Custom CSS Goes here*/
+/* may not be working */
 
 h1 {
   @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
 }
 
-h3 {
+h2 {
   @apply text-2xl font-bold mb-3;
 }
 
+
+h3 {
+  @apply text-lg font-bold mb-3;
+}
+
+/*a {
+  @apply decoration-solid;
+}
+*/
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],
