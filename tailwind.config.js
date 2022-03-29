@@ -1,5 +1,7 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
-  content: ["./**/*.html"],
+  content: ['./**/*.html'],
   theme: {
     container: {
       center: true,
@@ -9,5 +11,6 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require('@tailwindcss/typography')],
 };
+

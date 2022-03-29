@@ -14,6 +14,8 @@ layout: page
     <h3 class="font-bold text-2xl text-gray-900 mb-2">Some things I've done</h3>
     <p text-lg mb-3>What's a bragdoc?</p>
 
+    <!-- currently permalink: false yaml breaks this, so we have removed the links -->
+
     {% set bragslist = collections.brag %}
 
     {% for brag in bragslist | reverse %}
@@ -21,7 +23,7 @@ layout: page
             <h4 class="font-bold text-1xl text-gray-900 mb-2">
                 <a href="{{ brag.url | url }}">
                     {% if brag.data.title %}
-                        {{ brag.data.title }}
+                        {{ brag.data.icon }} {{ brag.data.title }}
                     {% else %}
                         Untitled
                     {% endif %}
@@ -32,11 +34,24 @@ layout: page
                     {{ brag.date | readableDate }}
                 </time>
             </p>
-            {% if brag.data.description %}
+            <!-- unclear why {{ content }} isnt' pulling anything through -->
+            <p>{{ content }}</p>
+            <!-- {% if brag.data.description %}
                 <p class="text-lg text-gray-500 mb-3">
                     {{ brag.data.description }}
                 </p>
-            {% endif %}
+            {% endif %} -->
+            <!-- <a href="{{ brag.url | url }}"> -->
+                <p class="bg-blue-500 text-white py-2 px-4 rounded-full">
+                    {% if brag.data.categories %}
+                        {{ brag.data.categories }}
+                    {% else %}
+                        No category
+                    {% endif %} 
+                </p>
+                    
+            <!-- </a> -->
+
 
         </article>
     {% endfor %}
