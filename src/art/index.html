@@ -4,126 +4,34 @@ layout: page
 eleventyExcludeFromCollections: true
 ---
 <section>
-    <h2 class="font-bold text-3xl text-gray-900 mb-2">Shows</h2>
-    <p text-lg mb-3>Market city film katana vehicle rain math-car render-farm weathered Tokyo table network meta. Paranoid artisanal boy refrigerator lights into semiotics augmented reality girl. Computer market pre-smart-drugs nodality car tattoo man.</p>
-    <p>Need to figure out flexbox</p>
-    <br />
-    <section class="pb-6">
-        <h3 class="font-bold text-2xl text-gray-900 mb-2">👁 Sleep Debtor</h3>
-        <p class="text-base leading-6 text-gray-500 mb-3">Papier-mache crypto-footage concrete Tokyo sunglasses convenience store stimulate shrine nano-drone.</p>
-        <section class="my-8">
-            {% for art in collections['sleep debtor'] %}
-            {{ art.data.title }} - just proving this works
-            {% endfor %}
-        </section>
-        <h3 class="font-bold text-2xl text-gray-900 mb-2">📦 " PARTS INSIDE "</h3>
-        <p class="text-base leading-6 text-gray-500 mb-3">Into face forwards cardboard car camera nodal point San Francisco. Math-lights computer post-sign pre-paranoid concrete A.I. engine systemic urban car.</p>
+    <h3 class="font-bold text-2xl text-gray-900 mb-2">🖥️ Digital</h3>
+    <p class="text-base leading-6 text-gray-500 mb-3">Sunglasses sentient hotdog chrome Tokyo face forwards dead nodal point katana lights digital alcohol concrete long-chain hydrocarbons singularity boy urban.</p>
 
-        <!-- image module here -->
-        <section class="mt-15 flex flex-wrap justify-center">
-            {% for art in collections['parts inside'] %}
-            <article class="w-64 my-8">
-                <h3 class="font-bold text-2xl text-gray-900 mb-2">
-                    <a href="{{ art.url | url }}">
-                        {% if art.data.title %}
-                        {{ art.data.title }}
-                        {% else %}
-                        Untitled
-                        {% endif %}
-                    </a>
-                </h3>
-                <figure>
-                    <img src="../../static/img/{{ art.data.imageName }}" alt="{{ art.data.description }}" width="100px">
-                </figure>
-                {% if art.data.description %}
-                <p class="text-lg text-gray-500 mb-3">
-                    {{ art.data.description }}
-                </p>
-                {% endif %}
-                <p>
-                    <a href="{{ art.url | url }}" class="text-yellow-500 hover:text-lime-500">
-                        Read more →
-                    </a>
-                </p>
-            </article>
-            {% endfor %}
-        </section>
-    </section>
-    <h2 class="font-bold text-3xl text-gray-900 mb-2">Other work</h2>
-    <p text-lg mb-3>Camera concrete tower shrine monofilament singularity BASE jump gang corporation long-chain hydrocarbons paranoid soul-delay cyber-uplink bomb warehouse. </p>
-    <br />
-    <section class="pb-6">
-        <h3 class="font-bold text-2xl text-gray-900 mb-2">🖼️ Analog</h3>
-        <p class="text-base leading-6 text-gray-500 mb-3">Drone hacker artisanal 3D-printed vehicle narrative plastic assassin math-monofilament. </p>
-        <section class="mt-15 flex flex-wrap">
-            {% for analog in collections.analog %}
-            <article class="my-8">
-                <h3 class="font-bold text-2xl text-gray-900 mb-2">
-                    <a href="{{ analog.url | url }}">
-                        {% if analog.data.title %}
-                        {{ analog.data.title }}
-                        {% else %}
-                        Untitled
-                        {% endif %}
-                    </a>
-                </h3>
-                <p class="text-base leading-6 text-gray-500 mb-3">
-                    <time>
-                        {{ art.date | readableDate }}
-                    </time>
-                </p>
-                <figure>
-                    <img src="../../static/img/{{ analog.data.imageName }}" alt="{{ analog.data.description }}" width="100px">
-                </figure>
-                {% if analog.data.description %}
-                <p class="text-lg text-gray-500 mb-3">
-                    {{ analog.data.description }}
-                </p>
-                {% endif %}
-                <p>
-                    <a href="{{ analog.url | url }}" class="text-yellow-500 hover:text-lime-500">
-                        Read more →
-                    </a>
-                </p>
-            </article>
-            {% endfor %}
-        </section>
-        <h3 class="font-bold text-2xl text-gray-900 mb-2">🖥️ Digital</h3>
-        <p class="text-base leading-6 text-gray-500 mb-3">Sunglasses sentient hotdog chrome Tokyo face forwards dead nodal point katana lights digital alcohol concrete long-chain hydrocarbons singularity boy urban.</p>
-        <section class="mt-15 flex flex-wrap">
-            {% for digital in collections.digital %}
-            <article class="w-1/3 px-2 bg-color-blue">
-                <a href="{{ digital.url | url }}">
-                <h3 class="font-bold text-2xl text-gray-900 mb-2">
-                    
-                        {% if digital.data.title %}
-                        {{ digital.data.title }}
-                        {% else %}
-                        Untitled
-                        {% endif %}
-                    
-                </h3>
-                <p class="text-base leading-6 text-gray-500 mb-3">
-                    <time>
-                        {{ digital.date | readableDate }}
-                    </time>
-                </p>
-                <figure>
-                    <img src="../../static/img/{{ digital.data.imageName }}" alt="{{ digital.data.description }}" width="100px">
-                </figure>
-                {% if digital.data.description %}
-                <p class="text-lg text-gray-500 mb-3">
-                    {{ digital.data.description }}
-                </p>
-                {% endif %}
-                <p>
-                    </a>
-                    <a href="{{ digital.url | url }}" class="text-yellow-500 hover:text-lime-500">
-                        Read more →
-                    </a>
-                </p>
-            </article>
-            {% endfor %}
-        </section>
-    </section>
+    Need to fix responsive
+    <section class="mt-15 flex flex-wrap justify-between">
+    {% for digital in collections.digital %}
+    <article class="relative w-40 overflow-hidden rounded-lg shadow-lg">
+      <img class="object-cover w-full h-full" src="../../static/img/{{ digital.data.imageName }}" alt="{{ digital.data.description }}"/>
+      <div class="absolute bottom-0 left-0 px-6 py-4">
+        <h3 class="mb-3 text-xl font-semibold tracking-tight text-white">
+            {% if digital.data.title %}
+                {{ digital.data.title }}
+                {% else %}
+                Untitled
+            {% endif %}
+        </h3>
+        <p class="leading-normal text-gray-100 text-sm">
+            {% if digital.data.description %}
+                {{ digital.data.description }}
+            {% endif %}
+        </p>
+      </div>
+    </article>
+    <!-- Stack under each card -->
+    <!-- <a href="{{ digital.url | url }}" class="text-yellow-500 hover:text-lime-500">
+        Read more →
+    </a> -->
+    {% endfor %}
 </section>
+</section>
+
