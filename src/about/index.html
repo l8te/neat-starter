@@ -3,16 +3,23 @@ title: About
 layout: page
 ---
 
-<section class="mt-15">
-    <h2 class="font-bold text-3xl text-gray-900 mb-2">Who is this
-    </h2>
-    <p text-lg mb-3>A description of what I do. Youtube monofilament assault voodoo god receding artisanal man rebar realism tank-traps. Smart-modem pen footage sunglasses chrome lights. Render-farm faded dome math-drugs tanto dolphin grenade assassin.</p>
-    
-    <!-- remove br when possible -->
-    <br />
+<!-- add anchor links for section headings? -->
 
-    <h3 class="font-bold text-2xl text-gray-900 mb-2">Some things I've done</h3>
-    <p text-lg mb-3>What's a bragdoc?</p>
+<section class="mt-15">
+
+    <article class="w-full max-w-3xl overflow-hidden border rounded-lg shadow-lg sm:flex my-6">
+        <div class="w-full sm:w-1/4">
+            <img class="object-cover w-full h-full" src="../../static/img/lee.jpg" alt="a photo of the artist lol" />
+        </div>
+        <div class="flex-1 px-6 py-4">
+            <h2 class="mb-3 tracking-tight font-bold text-3xl text-gray-900 mb-2">Who is this?</h2>
+            <p class="leading-normal text-gray-700">This is Lee. I'm an artist, pixel pusher, problem solver, digital generalist, and current grad student at Rutgers SC&I. Latewerks is the name I collect my art under, but it's also just a cool URL. I've had a portfolio online at this address for ages, but since starting school again, I wanted to expand what's here to include some of my other work.</p>
+        </div>
+    </article>
+
+    <h3 class="font-bold text-2xl text-gray-900 mb-2 pt-6">Here are some things I've done</h3>
+    <!-- <p>(decide on link styling)</p> -->
+    <a href="https://jvns.ca/blog/brag-documents/" class="underline mb-3" target="_blank">What's a bragdoc?<img src="../../static/img/noun-external-link-2863113.png" alt="icon indicating that this link goes to an external website" srcset="../../static/img/noun-external-link-2863113.svg" class="w-6 h-6 inline"/> </a>
 
     <!-- currently permalink: false yaml breaks this, so we have removed the links -->
 
@@ -61,4 +68,26 @@ layout: page
 
         </article>
     {% endfor %}
+
+<article class="relative max-w-full overflow-hidden rounded-lg shadow-lg text-center mb-6">
+  <img class="object-cover w-full h-48 hue-rotate-60" src="../../static/img/np_Layoutmadeoftropicalflowersandleaves_5nkqD4_free.jpg" alt="Palm leaves texture"/>
+  <div class="absolute top-0 px-6 py-4">
+    <h4 class="mb-3 text-xl font-semibold text-white">Colophon</h4>
+    <p class="leading-normal text-white">Many thanks to the people who make the tools I used to make this website:</p>
+    <ol class="leading-normal text-white">
+        <li><a href="https://www.11ty.dev/" class="underline">Eleventy</a>&mdash; bonus thanks to the incredibly helpful folks on the Eleventy discord!</li>
+        <li><a href="https://tailwindcss.com/" class="underline">TailwindCSS</a></li>
+        <li><a href="https://thenounproject.com/icon/external-link-2863113/" class="underline">External Link</a> by Nguyen Van Sao from NounProject.com</li>
+        <li><a href="https://thenounproject.com/photo/layout-made-of-tropical-flowers-and-leaves-5nkqD4/" class="underline">Layout Made Of Tropical Flowers And Leaves</a> by Zamurovic Brothers from NounProject.com</li>
+    </ol>
+  </div>
+</article>
+
+<article class="relative w-40 overflow-hidden rounded-lg shadow-lg mx-auto">
+  <img class="object-cover w-full h-2/4" src="../../static/img/../../static/img/boss-wave.gif" alt="A gif of an orange and white cat named Boss rolling on the carpet. It looks like he is waving."/>
+  <div class="absolute bottom-0 px-4 py-2">
+    <h4 class="mb-3 text-xl font-semibold text-white">Cat tax feat. Boss</h4>
+  </div>
+</article>
+
 </section>
