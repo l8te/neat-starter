@@ -9,3 +9,12 @@ package-lock.json
 
 # Local Netlify folder
 .netlify
+
+# no images except svg
+*.jpg
+*.gif
+*.png
+
+# remove Netlify-specific image files
+_headers
+src/static/img/index.html
