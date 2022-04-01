@@ -1,6 +1,7 @@
 {
     "layout": "posts",
     "author": "Lee",
+    "permalink": "/{{ title | slugify }}/",
     "tags": [
         "post"
     ]
