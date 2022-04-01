@@ -1,7 +1,7 @@
 {
     "layout": "art-page",
     "author": "Lee",
-    "permalink": "/{{ title | slugify }}/",
+    "permalink": "/art/{{ title | slugify }}/",
     "tags": [
         "art"
     ]

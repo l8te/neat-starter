@@ -2,34 +2,43 @@
 title: Art
 layout: page
 eleventyExcludeFromCollections: true
+permalink: "/art/"
 ---
 <section>
     <h3 class="font-bold text-2xl text-gray-900 mb-2">🖥️ Digital</h3>
     <p class="text-base leading-6 text-gray-500 mb-3">Digital work, mainly created using a combination of Clip Studio, Photoshop, and Illustrator, on an XP-Pen Innovator 16" tablet.</p>
-    <section class="grid grid-flow-row gap-1 md:grid-flow-col">
-        {% for digital in collections.digital %}
+
+    <ul>
+        {%- for art in collections.art -%}
+            <li>{{ art.data.title }}</li>
+        {%- endfor -%}
+    </ul>
+
+
+    <!-- <section class="grid grid-flow-row gap-1 md:grid-flow-col">
+        {% for art in collections.art %}
         <article class="relative overflow-hidden rounded-lg shadow-lg border my-2">
-            <a href="{{ digital.url | url }}">
-                <img class="object-cover w-full h-full hover:blur-sm" src="../../static/img/{{ digital.data.imageName }}" alt="{{ digital.data.description }}" />
+            <a href="{{ art.url | url }}">
+                <img class="object-cover w-full h-full hover:blur-sm" src="../../static/img/{{ art.data.imageName }}" alt="{{ art.data.description }}" />
                 <div class="absolute bottom-0 left-0 px-4 py-4">
                     <h3 class="mb-3 text-xl font-semibold tracking-tight text-white">
-                        {% if digital.data.title %}
-                        {{ digital.data.title }}
+                        {% if art.data.title %}
+                        {{ art.data.title }}
                         {% else %}
                         Untitled
                         {% endif %}
-                    </h3>
+                    </h3> -->
                     <!-- <p class="leading-normal text-gray-100 text-sm">
-                {% if digital.data.description %}
-                    {{ digital.data.description }}
+                {% if art.data.description %}
+                    {{ art.data.description }}
                 {% endif %}
             </p> -->
-                    <p class="text-yellow-500 hover:text-lime-500 font-bold">
+                    <!-- <p class="text-yellow-500 hover:text-lime-500 font-bold">
                         →
                     </p>
                 </div>
             </a>
         </article>
         {% endfor %}
-    </section>
+    </section> -->
 </section>
