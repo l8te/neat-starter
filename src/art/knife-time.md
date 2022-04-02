@@ -7,4 +7,5 @@ tags: [ 'knives', 'plants', 'parts inside' ]
 imageName: knife-time.png
 hasImage: True
 public: True
+layout: art-page-horiz
 ---

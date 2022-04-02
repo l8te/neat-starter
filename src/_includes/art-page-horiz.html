@@ -1,19 +1,22 @@
 ---
 layout: default
 ---
-<!-- removed prose styling on text, may replace -->
+
 <!-- add secondary layout for horizontal work -->
 
 <div class="container max-w-5xl mt-6 px-6">
 
     <h1 class="font-bold text-5xl">{{ title }}</h1>
 
-    <section class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <section class="mt-14 grid grid-cols-1">
         
         <article>
             <img class="object-cover w-full h-full" src="../../static/img/{{ imageName }}" alt="{{ description }}" />
         </article>
-        <article class="mr-6">
+
+    </section>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <article class="my-4">
             <p>{{ content | safe }}</p>
             <p>{{ description }}</p>
             <time>{{ date | readableDate }}</time>
@@ -30,37 +33,27 @@ layout: default
 
                 {% endfor %} 
             </p>
-
+        </article>
+        <article class="my-4">
             {% set previousPost = collections[parent] | getPreviousCollectionItem(page) %}
             {% set nextPost = collections[parent] | getNextCollectionItem(page) %}
 
-            <h2 class="mt-14">More in {{ parent }}:</h2>
+            <h2>More in {{ parent }}:</h2>
            
             <ul class="list-none">
                 <li>
-                    {% if nextPost %}Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
+                    {% if previousPost %}Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
                 </li>
                 <li>
-                    {% if previousPost %}Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
+                    {% if nextPost %}Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
                 </li>
             </ul>
 
+            
 
-            <!-- <p class="text-xs p-6 bg-yellow-100">
-                Check to see if we can get the frontmatter: <br>
-                {{ title }} <br>
-                {{ parent }} <br>
-                {{ date }} <br>
-                {{ tags }} <br>
-                {{ description }} <br>
-                {{ imageName }} <br>
+        </article>
 
-                {{ content }} <br>
-            </p> -->
-
-
-
-       </article>
-    </section> 
-
+            
+    </section>
+        
 </div>
