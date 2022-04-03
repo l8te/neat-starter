@@ -10,7 +10,7 @@ permalink: "/art/"
             <li>{{ post.data.title }} - {{ post.data.parent }}</li> 
         {%- endfor -%}
     </ul> -->
-    <h2 class="mb-3 tracking-tight font-bold text-3xl text-gray-900">Shows</h2>
+    <!-- <h2 class="mb-3 tracking-tight font-bold text-3xl text-gray-900">Shows</h2>
     <h3 class="font-bold text-2xl text-gray-900 mb-2">📦 " PARTS INSIDE "</h3>
     <p class="text-base leading-6 text-gray-500 mb-3">About the shows.</p>
     <section class="grid grid-flow-row gap-1 md:grid-flow-col">
@@ -30,13 +30,13 @@ permalink: "/art/"
             </a>
         </article>
         {% endfor %}
-    </section>
+    </section> -->
     <h2 class="mt-8 mb-3 tracking-tight font-bold text-3xl text-gray-900">Other work</h2>
     <h3 class="font-bold text-2xl text-gray-900 mb-2">🖥️ Digital</h3>
     <p class="text-base leading-6 text-gray-500 mb-3">Digital work, mainly created using a combination of Clip Studio, Photoshop, and Illustrator, on an XP-Pen Innovator 16" tablet.</p>
-    <section class="grid grid-flow-row gap-1 md:grid-flow-col">
+    <section class="grid grid-cols-1 gap-4 md:grid-cols-3">
         {% for post in collections.digital %}
-        <article class="relative overflow-hidden rounded-lg shadow-lg border my-2">
+        <article class="relative overflow-hidden rounded-lg shadow-lg border">
             <a href="{{ post.url | url }}">
                 <img class="object-cover w-full h-full hover:blur-sm" src="../../static/img/{{ post.data.imageName }}" alt="{{ post.data.description }}" />
                 <div class="absolute bottom-0 left-0 px-4 py-4">
