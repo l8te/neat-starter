@@ -3,8 +3,8 @@ layout: default
 prism: true
 ---
 
-<div class="container max-w-4xl mt-6  px-6">
-    <div class="pb-5 mb-5 border-b border-gray-100">
+<div class="container max-w-4xl mt-6">
+    <div class="pb-6 mb-6 border-b border-lime-300">
         <h1 class="font-bold text-5xl">{{ title }}</h1>
         <p class="text-center text-base leading-6 font-medium text-gray-500">
             <time> {{ date | readableDate }}
@@ -15,7 +15,24 @@ prism: true
         </p>
 
     </div>
-    <article class="prose lg:prose-xl my-4 mx-auto">
-        {{ content | safe }}</article>
+    <article class="pb-6 mb-6 prose lg:prose-xl text-justify border-b border-lime-300">
+        {{ content | safe }}
+    </article>
+
+
+    <!-- better formatting -->
+    <div class="prose lg:prose-xl pb-6 my-4">
+        
+        {% set previousPost = collections.post | getPreviousCollectionItem(page) %}
+        {% set nextPost = collections.post | getNextCollectionItem(page) %}
+           
+                <p>
+                    {% if previousPost %}Previous: <a href="{{ previousPost.url }}" class="hover:text-lime-500">{{ previousPost.data.title }}</a>{% endif %} <br>
+            
+                    {% if nextPost %}Next: <a href="{{ nextPost.url }}" class="hover:text-lime-500">{{ nextPost.data.title }}</a>{% endif %}
+                </p>
+    </div>
+    
 
 </div>
+

@@ -2,9 +2,8 @@
 title: Rebuilding my website with 11ty, Tailwind CSS, and Netlify
 description: More than a fresh coat of paint.
 author: Lee
-date: 2022-03-28T20:49:24.112Z
+date: 2022-03-28
 tags: [ 'dev', ' 11ty', 'Tailwind CSS', 'Netlify' ]
-
 ---
 Numinous table boy sentient math-beef noodles shanty town render-farm silent 8-bit corrupted engine hotdog DIY towards dead augmented reality. Pre-courier voodoo god savant lights Chiba semiotics neural knife physical DIY. Claymore mine receding tattoo math-crypto-advert woman franchise vinyl sign alcohol plastic uplink rebar tube otaku dissident. Corrupted tanto artisanal sub-orbital singularity systemic human disposable soul-delay physical. 
 
